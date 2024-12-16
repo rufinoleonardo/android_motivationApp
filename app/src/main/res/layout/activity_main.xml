@@ -6,70 +6,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <LinearLayout
+        android:id="@+id/layout_navbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#94036B"
+        android:background="@color/purple"
         android:orientation="horizontal"
      >
         <ImageView
+            android:id="@+id/ic_all_messages"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="40dp"
             android:src="@drawable/ic_all_inclusive"
-            android:background="#94036b"
+            android:background="@color/purple"
             android:layout_gravity="center_vertical"
-            app:tint="@color/white"
+            app:tint="@color/dark_purple"
             />
 
         <ImageView
+            android:id="@+id/ic_smile"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="40dp"
             android:src="@drawable/ic_smile"
-            android:background="#94036b"
+            android:background="@color/purple"
             android:layout_gravity="center_vertical"
-            app:tint="@color/white"
+            app:tint="@color/dark_purple"
             />
 
         <ImageView
+            android:id="@+id/ic_sunny"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="40dp"
             android:src="@drawable/ic_sunny"
-            android:background="#94036b"
+            android:background="@color/purple"
             android:layout_gravity="center_vertical"
-            app:tint="@color/white"
+            app:tint="@color/dark_purple"
             />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text_user_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        android:layout_below="@id/layout_navbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/cabin"
+        />
+
+    <TextView
         android:id="@+id/text_phrase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Motivation message here"
         android:layout_centerInParent="true"
-        android:textAlignment="center"
+        android:fontFamily="@font/cabin"
         android:padding="16dp"
-        />
+        android:text="@string/phrases_motivation"
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
     <View
         android:layout_width="128dp"
         android:layout_height="4dp"
-        android:background="@color/black"
+        android:background="@color/dark_purple"
+        android:elevation="4dp"
         android:layout_below="@id/text_phrase"
         android:layout_centerHorizontal="true"
         />
 
     <Button
-        android:layout_width="264dp"
+        android:id="@+id/button_new_phrase"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
-        android:text="New phrase"
+        android:text="@string/new_phrase"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
+        android:fontFamily="@font/cabin"
+        android:backgroundTint="@color/dark_purple"
         />
 </RelativeLayout>
